@@ -56,7 +56,7 @@ export class DeployStack extends Stack {
     );  
 
     this.cfnOutCloudFrontUrl = new cdk.CfnOutput(this, "CfnOutCloudFrontUrl", {
-      value: `https://${______________________}`,
+      value: `https://${distribution.distributionDomainName}`,
       description: "The CloudFront URL",
     });
     
